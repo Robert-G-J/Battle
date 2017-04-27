@@ -5,6 +5,6 @@ feature 'Attack Player' do
     visit '/'
     sign_in_and_play
     click_button 'ATTACK!'
-    expect(page).to have_content "You have successfully attacked God!"
+    expect(page).to have_content "The Donald has successfully attacked God!"
   end
 end
