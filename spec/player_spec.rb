@@ -10,25 +10,15 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'reduces HP of a player' do
-      expect(jess).to receive(:loses_HP)
-      bernie.attack(jess)
-    end
-  end
-
-
   describe "#hp" do
     it 'knows its hp' do
       expect(jess.hp).to eq Player::DEFAULT_HEALTH
     end
+  end
 
-    context 'Attack reduce HP' do
-      it 'deducts 10 HP' do
+  describe '#loses_HP' do
+      it 'deducts 10 from player 2' do
         expect{ jess.loses_HP }.to change{ jess.hp }.by(-Player::DEFAULT_DAMAGE)
       end
     end
-
-  end
-
 end
