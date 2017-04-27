@@ -9,4 +9,10 @@ describe Player do
     end
   end
 
+  describe "#hp" do
+    it 'knows its hp' do
+      expect(jess.hp).to eq 60
+    end
+  end
+
 end
