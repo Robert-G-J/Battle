@@ -13,6 +13,13 @@ describe Player do
     it 'knows its hp' do
       expect(jess.hp).to eq 60
     end
+
+    context 'Attack reduce HP' do
+      it 'deducts 10 HP' do
+        expect{ jess.loses_HP }.to change{ jess.hp }.by(-10)
+      end
+    end
+
   end
 
 end

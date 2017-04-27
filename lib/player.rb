@@ -8,4 +8,11 @@ class Player
     @hp = hp
   end
 
+  def loses_HP
+    self.hp = self.hp - 10
+  end
+
+  private
+  attr_writer :hp
+
 end
